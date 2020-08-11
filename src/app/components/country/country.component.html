@@ -1,0 +1,19 @@
+<div *ngIf="(curr | json) != '{}'">
+  <h1>{{ curr.country }}</h1>
+  <h2>total cases: {{ curr.cases }}</h2>
+  <h2>total cases: {{ curr.todayCases }}</h2>
+  <h2>total cases: {{ curr.active }}</h2>
+</div>
+
+<mat-card>
+  <mat-card-title> {{ curr.country }}</mat-card-title>
+  <mat-card-content>{{ curr.cases }}</mat-card-content>
+  <mat-card-content> {{ curr.todayCases }}</mat-card-content>
+  <mat-card-content> {{ curr.active }}</mat-card-content>
+</mat-card>
+
+<div *ngIf="(curr | json) == '{}'">
+  <h1>sorry don't know your country</h1>
+</div>
+
+<!-- <h1>{{ curr | json }}</h1> -->

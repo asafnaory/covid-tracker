@@ -1,0 +1,13 @@
+<!-- <p>list works!</p> -->
+<!-- <select (change)="handleChange($event)"> -->
+<!-- <option *ngFor="let c of countries" [value]="c.Country">{{ c.Country }}</option> -->
+<!-- </select> -->
+
+<mat-form-field appearance="outline">
+  <mat-label>country</mat-label>
+  <mat-select #sel (selectionChange)="handleChange(sel.value)">
+    <mat-option *ngFor="let c of countries" [value]="c.Country">
+      {{ c.Country }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
